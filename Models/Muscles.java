@@ -1,4 +1,4 @@
-package bazfitness;
+package Models;
 
 public class Muscles {
     public int MuscleID;

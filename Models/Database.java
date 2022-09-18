@@ -1,4 +1,4 @@
-package bazfitness;
+package Models;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

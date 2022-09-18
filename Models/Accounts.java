@@ -1,4 +1,4 @@
-package bazfitness;
+package Models;
 
 public class Accounts {
     public int AccountID;

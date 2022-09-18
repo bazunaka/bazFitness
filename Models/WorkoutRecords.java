@@ -1,4 +1,4 @@
-package bazfitness;
+package Models;
 
 public class WorkoutRecords {
     public int RecordID;
