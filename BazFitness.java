@@ -1,8 +1,11 @@
+import java.io.IOException;
 import java.sql.SQLException;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.text.Text;
 
 import Models.Database;
@@ -20,20 +23,10 @@ public class BazFitness extends Application {
     }
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Views/Main.fxml"));
 
-        // установка надписи
-        Text text = new Text("Hello METANIT.COM!");
-        text.setLayoutY(80); // установка положения надписи по оси Y
-        text.setLayoutX(80); // установка положения надписи по оси X
-
-        Group group = new Group(text);
-
-        Scene scene = new Scene(group);
-        stage.setScene(scene);
-        stage.setTitle("JavaFX Application");
-        stage.setWidth(300);
-        stage.setHeight(250);
+        stage.setScene(new Scene(root));
         stage.show();
     }
 }

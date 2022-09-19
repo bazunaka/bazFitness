@@ -5,6 +5,14 @@
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "sqlite-jdbc-3.39.3.0.jar"
+        "sqlite-jdbc-3.39.3.0.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx-swt.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx.base.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx.controls.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx.fxml.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx.graphics.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx.media.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx.swing.jar",
+        "/Users/andrejsuvorov/Downloads/javafx-sdk-19/lib/javafx.web.jar"
     ]
 }
