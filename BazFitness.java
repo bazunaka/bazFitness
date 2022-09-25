@@ -4,20 +4,15 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.Group;
 import javafx.scene.Parent;
-import javafx.scene.text.Text;
-
 import Models.Database;
 
 public class BazFitness extends Application {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        // System.out.println("Hello World!");
+        Database.Connect();
 
-        // Database.Connect();
-
-        // Database.InsertDB();
+        Database.InsertDB();
 
         launch(args);
     }

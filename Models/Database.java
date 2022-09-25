@@ -18,7 +18,7 @@ public class Database {
 
     public static void InsertDB() throws SQLException {
         Statement statement = conn.createStatement();
-        statement.execute("INSERT INTO 'Accounts' ('AccountName', 'AccountPswd') VALUES('admin3', 'admin3');");
+        statement.execute("INSERT INTO 'Accounts' ('AccountName', 'AccountPswd') VALUES('admin', 'admin');");
         System.out.println("Add success!");
     }
 }
