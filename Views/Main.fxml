@@ -16,9 +16,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0"
-  xmlns="http://javafx.com/javafx/18"
-  xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -71,7 +69,7 @@
                 <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
               </textFill>
             </Label>
-            <ListView AnchorPane.topAnchor="40" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10"/>
+            <ListView layoutY="87.0" prefHeight="463.0" prefWidth="231.0" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
