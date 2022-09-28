@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import Models.Database;
 
 public class BazFitness extends Application {
@@ -22,22 +24,24 @@ public class BazFitness extends Application {
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
         Database.Connect();
 
-        Scanner file;
-        PrintWriter writer;
-
-        file = new Scanner(new File("Data/shoulders.txt"));
-        writer = new PrintWriter("Data/shoulders_new.txt");
-
-        while (file.hasNext()) {
-            String line = file.nextLine();
-            if (!line.isEmpty()) {
-                writer.write(line);
-                writer.write("\n");
-            }
-        }
-
-        file.close();
-        writer.close();
+        /*
+         * Scanner file;
+         * PrintWriter writer;
+         * 
+         * file = new Scanner(new File("Data/shoulders.txt"));
+         * writer = new PrintWriter("Data/shoulders_new.txt");
+         * 
+         * while (file.hasNext()) {
+         * String line = file.nextLine();
+         * if (!line.isEmpty()) {
+         * writer.write(line);
+         * writer.write("\n");
+         * }
+         * }
+         * 
+         * file.close();
+         * writer.close();
+         */
 
         /*
          * Try start Python script from Java.

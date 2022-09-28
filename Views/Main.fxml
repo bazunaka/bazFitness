@@ -16,7 +16,9 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0"
+  xmlns="http://javafx.com/javafx/18"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -50,9 +52,10 @@
             <MenuItem mnemonicParsing="false" text="Unselect All" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Помощь">
+        <Menu mnemonicParsing="false" text="Справочники">
           <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+            <MenuItem fx:id="selectMG" mnemonicParsing="false" onAction="#click" text="Группы мышц" />
+            <MenuItem mnemonicParsing="false" text="Упражнения" />
           </items>
         </Menu>
       </menus>
@@ -61,7 +64,7 @@
       <items>
         <AnchorPane>
           <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Упражнения" textAlignment="CENTER" wrapText="false">
+            <Label fx:id="lbl" alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Упражнения" textAlignment="CENTER" wrapText="false">
               <font>
                 <Font size="18.0" fx:id="x1" />
               </font>
