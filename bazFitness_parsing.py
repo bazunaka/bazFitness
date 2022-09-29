@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 
-url = 'http://sportwiki.to/Плечи_-_упражнения_и_особенности_тренировки'
+url = 'http://sportwiki.to/Грудные_мышцы_-_упражнения_и_особенности_тренировки'
 response = requests.get(url)
 
 soup = BeautifulSoup(response.text, 'html.parser')
@@ -11,10 +11,10 @@ result_list = {'name': [], 'fk': []}
 
 for quote in quotes:
     result_list['name'].append(quote.text)
-    result_list['fk'].append('2')
+    result_list['fk'].append('3')
 
 df = pd.DataFrame(result_list)
-df.to_csv("Data/shoulders.csv")
+df.to_csv("Data/pectoral.csv")
 
 '''file = open("Data/shoulders.txt", "w")
 for quote in quotes:
