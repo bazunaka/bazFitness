@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
@@ -22,7 +18,12 @@ public class MainController {
     private ListView lstView;
 
     @FXML
-    private void click(ActionEvent e) {
-        lstView.getItems().add("asdasd");
+    private void click_selectMG(ActionEvent e) {
+        lbl.setText("Группы мышц");
+    }
+
+    @FXML
+    private void click_selectWorkout(ActionEvent e) {
+        lbl.setText("Упражнения");
     }
 }
