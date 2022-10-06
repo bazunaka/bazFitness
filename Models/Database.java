@@ -49,10 +49,10 @@ public class Database {
         return workout;
     }
 
-    public static List<String> SelectWorkout(int id) throws SQLException {
+    public static List<String> SelectWorkout(String nameMG) throws SQLException {
         Statement statement = conn.createStatement();
         ResultSet result = statement.executeQuery(
-                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE w.GroupID = " + id + ";");
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + nameMG + "' ;");
         List<String> workout = new ArrayList<String>();
         while (result.next()) {
             String name = result.getString(1);

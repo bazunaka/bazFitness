@@ -57,7 +57,7 @@ public class MainController {
         lstView.getItems().addAll(str);
         selectedItems();
 
-        System.out.println(Database.SelectWorkout(3));
+        System.out.println(Database.SelectWorkout("Грудь"));
     }
 
     @FXML
