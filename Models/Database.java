@@ -29,12 +29,23 @@ public class Database {
 
     public static List<String> SelectMG() throws SQLException {
         Statement statement = conn.createStatement();
-        ResultSet result = statement.executeQuery("SELECT * FROM MuscleGroups mg;");
+        ResultSet result = statement.executeQuery("SELECT * FROM MuscleGroups mg ;");
         List<String> mg = new ArrayList<String>();
         while (result.next()) {
             String name = result.getString(2);
             mg.add(name);
         }
         return mg;
+    }
+
+    public static List<String> SelectWorkout() throws SQLException {
+        Statement statement = conn.createStatement();
+        ResultSet result = statement.executeQuery("SELECT * FROM Workouts w ;");
+        List<String> workout = new ArrayList<String>();
+        while (result.next()) {
+            String name = result.getString(2);
+            workout.add(name);
+        }
+        return workout;
     }
 }
