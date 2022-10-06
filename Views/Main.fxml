@@ -54,8 +54,8 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Справочники">
           <items>
-            <MenuItem fx:id="selectMG" mnemonicParsing="false" text="Группы мышц" onAction="#click_selectMG" />
-            <MenuItem fx:id="selectWorkout" mnemonicParsing="false" text="Упражнения" onAction="#click_selectWorkout" />
+            <MenuItem fx:id="selectMG" mnemonicParsing="false" onAction="#click_selectMG" text="Группы мышц" />
+            <MenuItem fx:id="selectWorkout" mnemonicParsing="false" onAction="#click_selectWorkout" text="Упражнения" />
           </items>
         </Menu>
       </menus>
@@ -72,7 +72,7 @@
                 <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
               </textFill>
             </Label>
-            <ListView layoutY="87.0" prefHeight="463.0" prefWidth="231.0" />
+            <ListView fx:id="lstView" layoutY="87.0" prefHeight="463.0" prefWidth="231.0" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">

@@ -1,3 +1,10 @@
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import Models.Database;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
@@ -8,6 +15,7 @@ public class MainController {
 
     public MainController() {
         this.selectMG = new MenuItem();
+        this.lstView = new ListView<>();
     }
 
     @FXML
@@ -15,11 +23,16 @@ public class MainController {
     @FXML
     private Label lbl;
     @FXML
-    private ListView lstView;
+    private ListView<String> lstView;
 
     @FXML
-    private void click_selectMG(ActionEvent e) {
+    private void click_selectMG(ActionEvent e) throws SQLException {
         lbl.setText("Группы мышц");
+        List<String> mg = Database.SelectMG();
+        ObservableList<String> str = FXCollections.<String>observableArrayList(mg);
+
+        lstView.getItems().addAll(str);
+
     }
 
     @FXML
