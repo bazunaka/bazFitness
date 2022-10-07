@@ -1,3 +1,4 @@
+import random
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -22,6 +23,28 @@ for image in images:
 
 for image in images_list:
     print(image)
+
+
+def get_link_img(url):
+    response = requests.get(url)
+    soap = BeautifulSoup(response.content, "html.parser")
+    links = soap.find_all("img", class_="serp-item__thumb justifier__thumb")
+    i = 0
+    while i > 5:
+        for link in links:
+            link = link.get("src")
+            linked = "https:"+str(link)
+            # writing to a file
+            name = random.random()
+            p = requests.get(linked)
+            out = open(f"Data\Galery{name}.jpg", "wb")
+            out.write(p.content)
+            out.close()
+            i = + 1
+
+
+get_link_img(
+    "https://yandex.ru/images/search?from=tabbar&text=сгибание%20рук%20на%20скамье%20скотта")
 
 '''df = pd.DataFrame(result_list)
 df.to_csv("Data/images.csv")'''
