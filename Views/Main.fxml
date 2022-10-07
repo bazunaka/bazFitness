@@ -76,7 +76,7 @@
                 <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
               </textFill>
             </Label>
-            <ListView fx:id="lstView" layoutY="87.0" prefHeight="463.0" prefWidth="231.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="70.0" />
+            <ListView fx:id="lstView" layoutY="87.0" onMouseClicked="#someFunc" prefHeight="463.0" prefWidth="231.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="70.0" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">

@@ -10,6 +10,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.MultipleSelectionModel;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
@@ -19,6 +21,7 @@ public class MainController {
         this.selectMG = new MenuItem();
         this.lstView = new ListView<>();
         this.leftStatus = new Label();
+        this.imageWorkout = new ImageView();
     }
 
     @FXML
@@ -29,6 +32,8 @@ public class MainController {
     private ListView<String> lstView;
     @FXML
     private Label leftStatus;
+    @FXML
+    private ImageView imageWorkout;
 
     @FXML
     private void click_selectMG(ActionEvent e) throws SQLException {
@@ -57,7 +62,8 @@ public class MainController {
         lstView.getItems().addAll(str);
         selectedItems();
 
-        System.out.println(Database.SelectWorkout("Грудь"));
+        Image img = new Image("http://sportwiki.to/images/thumb/b/be/Scott.jpg/120px-Scott.jpg");
+        imageWorkout.setImage(img);
     }
 
     @FXML
@@ -70,5 +76,10 @@ public class MainController {
                 leftStatus.setText("Selected: " + newValue);
             }
         });
+    }
+
+    @FXML
+    private void someFunc() throws SQLException {
+        System.out.println(leftStatus.getText());
     }
 }
