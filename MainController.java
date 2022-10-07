@@ -62,8 +62,6 @@ public class MainController {
         lstView.getItems().addAll(str);
         selectedItems();
 
-        Image img = new Image("http://sportwiki.to/images/thumb/b/be/Scott.jpg/120px-Scott.jpg");
-        imageWorkout.setImage(img);
     }
 
     @FXML
@@ -76,10 +74,20 @@ public class MainController {
                 leftStatus.setText("Selected: " + newValue);
             }
         });
+
     }
 
     @FXML
     private void someFunc() throws SQLException {
         System.out.println(leftStatus.getText());
+        if (lstView.getFocusModel().getFocusedIndex() == 1) {
+            Image img = new Image(
+                    "https://avatars.dzeninfra.ru/get-zen_doc/1245197/pub_5e357605d310cc6ad4eaa84a_5e3581ee7749463424e3139f/scale_1200");
+            imageWorkout.setImage(img);
+        } else if (lstView.getFocusModel().getFocusedIndex() == 2) {
+            Image img = new Image(
+                    "https://alfagym.ru/wp-content/uploads/c/6/7/c67171f8f8c593f27aad29a2cd9582e5.jpeg");
+            imageWorkout.setImage(img);
+        }
     }
 }
