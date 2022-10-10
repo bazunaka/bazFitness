@@ -71,7 +71,7 @@ public class MainController {
 
             public void changed(ObservableValue<? extends String> changed, String oldValue, String newValue) {
 
-                leftStatus.setText("Selected: " + newValue);
+                leftStatus.setText(newValue);
             }
         });
 
@@ -80,14 +80,33 @@ public class MainController {
     @FXML
     private void someFunc() throws SQLException {
         System.out.println(leftStatus.getText());
-        if (lstView.getFocusModel().getFocusedIndex() == 1) {
-            Image img = new Image(
-                    "https://avatars.dzeninfra.ru/get-zen_doc/1245197/pub_5e357605d310cc6ad4eaa84a_5e3581ee7749463424e3139f/scale_1200");
-            imageWorkout.setImage(img);
-        } else if (lstView.getFocusModel().getFocusedIndex() == 2) {
-            Image img = new Image(
-                    "https://alfagym.ru/wp-content/uploads/c/6/7/c67171f8f8c593f27aad29a2cd9582e5.jpeg");
-            imageWorkout.setImage(img);
-        }
+        // if (lstView.getFocusModel().getFocusedIndex() == 0) {
+        // Image img = new Image(
+        // "Images/1.png");
+        // imageWorkout.setImage(img);
+        // } else if (lstView.getFocusModel().getFocusedIndex() == 1) {
+        // Image img = new Image(
+        // "Images/2.jpeg");
+        // imageWorkout.setImage(img);
+        // } else if (lstView.getFocusModel().getFocusedIndex() == 2) {
+        // Image img = new Image(
+        // "Images/3.png");
+        // imageWorkout.setImage(img);
+        // } else if (lstView.getFocusModel().getFocusedIndex() == 3) {
+        // Image img = new Image(
+        // "Images/4.jpeg");
+        // imageWorkout.setImage(img);
+        // }
+        lstView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                Image img = new Image("Images/" + newValue + ".jpeg");
+                imageWorkout.setImage(img);
+            }
+
+        });
+        // Image img = new Image("Images/" + lstView.selectedID() + ".jpeg");
+        // imageWorkout.setImage(img);
     }
 }
