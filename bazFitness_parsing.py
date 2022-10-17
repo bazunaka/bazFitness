@@ -3,17 +3,34 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 
-url = 'http://sportwiki.to/Бицепс_-_упражнения_и_особенности_тренировки'
-response = requests.get(url)
+url = 'http://sportwiki.to/Ноги_-_упражнения_и_особенности_тренировки'
 
-soup = BeautifulSoup(response.text, 'html.parser')
-'''quotes = soup.find_all('a', class_="image")
-result_list = {'name': []}
 
+def get_musclesName(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    quotes = soup.find_all('li')
+    result_list = {'name': [], 'fk': 5}
+
+    for quote in quotes:
+        result_list['name'].append(quote.text)
+
+    print(result_list)
+
+    df = pd.DataFrame(result_list)
+    df.to_csv("Data/foot.csv")
+
+
+'''file = open("Data/shoulders.txt", "w")
 for quote in quotes:
-    result_list['name'].append(quote.text)'''
+    file.write(quote.text)
+file.close()'''
 
-images_list = []
+get_musclesName(url)
+
+
+'''images_list = []
 
 images = soup.select('img')
 for image in images:
@@ -22,7 +39,7 @@ for image in images:
     images_list.append({"src": src, "alt": alt})
 
 for image in images_list:
-    print(image)
+    print(image)'''
 
 
 def get_link_img(url):
@@ -43,16 +60,9 @@ def get_link_img(url):
             i = + 1
 
 
-get_link_img(
-    "https://yandex.ru/images/search?from=tabbar&text=сгибание%20рук%20на%20скамье%20скотта")
+'''get_link_img(
+    "https://yandex.ru/images/search?from=tabbar&text=сгибание%20рук%20на%20скамье%20скотта")'''
 
-'''df = pd.DataFrame(result_list)
-df.to_csv("Data/images.csv")'''
-
-'''file = open("Data/shoulders.txt", "w")
-for quote in quotes:
-    file.write(quote.text)
-file.close()'''
 
 '''internalLinks = [
     a.get('href') for a in soup.find_all('a', class_='mainpage-content')

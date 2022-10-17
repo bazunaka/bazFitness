@@ -61,3 +61,7 @@ public class Database {
         return workout;
     }
 }
+
+https:// yandex.ru/images/search?from=tabbar&text=Сгибания%20рук%20на%20скамье%20Скотта
+https:// yandex.ru/images/search?text=Подъем%20штанги%20на%20скамье%20Скотта&from=tabbar
+https:// yandex.ru/images/search?text=Подъем%20штанги%20на%20скамье%20Скотта&from=tabbar&pos=1&img_url=http%3A%2F%2Falfagym.ru%2Fwp-content%2Fuploads%2Fc%2F6%2F7%2Fc67171f8f8c593f27aad29a2cd9582e5.jpeg&rpt=simage&lr=213

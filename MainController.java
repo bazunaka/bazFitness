@@ -62,6 +62,12 @@ public class MainController {
         lstView.getItems().addAll(str);
         selectedItems();
 
+        // WebView browser = new WebView();
+
+        // WebEngine webEngine = browser.getEngine();
+
+        // webEngine.load("http://ya.ru");
+
     }
 
     @FXML
