@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 
-url = 'http://sportwiki.to/Ноги_-_упражнения_и_особенности_тренировки'
+url = 'http://sportwiki.to/Пресс_-_упражнения_и_особенности_тренировки'
 
 
 def get_musclesName(url):
@@ -11,7 +11,7 @@ def get_musclesName(url):
     soup = BeautifulSoup(response.text, 'html.parser')
 
     quotes = soup.find_all('li')
-    result_list = {'name': [], 'fk': 5}
+    result_list = {'name': [], 'fk': 7}
 
     for quote in quotes:
         result_list['name'].append(quote.text)
@@ -19,7 +19,7 @@ def get_musclesName(url):
     print(result_list)
 
     df = pd.DataFrame(result_list)
-    df.to_csv("Data/foot.csv")
+    df.to_csv("Data/press.csv")
 
 
 '''file = open("Data/shoulders.txt", "w")
