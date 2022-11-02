@@ -17,9 +17,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0"
-  xmlns="http://javafx.com/javafx/18"
-  xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -56,10 +54,7 @@
         <Menu mnemonicParsing="false" text="Справочники">
           <items>
             <MenuItem fx:id="selectMG" mnemonicParsing="false" onAction="#click_selectMG" text="Группы мышц" />
-            <MenuItem fx:id="selectWorkout" mnemonicParsing="false" onAction="#click_selectWorkout" text="Упражнения">
-              <MenuItem mnemonicParsing="false" text="Упражнения" />
-              <MenuItem mnemonicParsing="false" text="Упражнения" />
-            </MenuItem>
+            <MenuItem fx:id="selectWorkout" mnemonicParsing="false" onAction="#click_selectWorkout" text="Упражнения" />
           </items>
         </Menu>
       </menus>
