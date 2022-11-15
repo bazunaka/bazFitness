@@ -60,4 +60,15 @@ public class Database {
         }
         return workout;
     }
+
+    public static List<String> SelectTP() throws SQLException {
+        Statement statement = conn.createStatement();
+        ResultSet result = statement.executeQuery("SELECT * FROM TrainingPlan tg ;");
+        List<String> tp = new ArrayList<String>();
+        while (result.next()) {
+            String name = result.getString(2);
+            tp.add(name);
+        }
+        return tp;
+    }
 }

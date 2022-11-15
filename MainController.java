@@ -39,6 +39,8 @@ public class MainController {
         this.buttocks  = new MenuItem();
         this.press     = new MenuItem();
         this.cardio    = new MenuItem();
+
+        this.selectTP  = new MenuItem();
     }
 
     @FXML
@@ -70,6 +72,9 @@ public class MainController {
     private MenuItem press;
     @FXML
     private MenuItem cardio;
+
+    @FXML
+    private MenuItem selectTP;
 
     @FXML
     private void click_selectMG(ActionEvent e) throws SQLException {
@@ -228,6 +233,20 @@ public class MainController {
     }
 
     @FXML
+    private void click_selectTP(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+
+        lbl.setText(selectTP.getText());
+        List<String> tp = Database.SelectTP();
+        ObservableList<String> str = FXCollections.<String>observableArrayList(tp);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
+    }
+
+    @FXML
     private void selectedItems() {
         MultipleSelectionModel<String> multipleSelectMode = lstView.getSelectionModel();
         multipleSelectMode.selectedItemProperty().addListener(new ChangeListener<String>() {
@@ -240,36 +259,4 @@ public class MainController {
 
     }
 
-    @FXML
-    private void someFunc() throws SQLException {
-        System.out.println(leftStatus.getText());
-        // if (lstView.getFocusModel().getFocusedIndex() == 0) {
-        // Image img = new Image(
-        // "Images/1.png");
-        // imageWorkout.setImage(img);
-        // } else if (lstView.getFocusModel().getFocusedIndex() == 1) {
-        // Image img = new Image(
-        // "Images/2.jpeg");
-        // imageWorkout.setImage(img);
-        // } else if (lstView.getFocusModel().getFocusedIndex() == 2) {
-        // Image img = new Image(
-        // "Images/3.png");
-        // imageWorkout.setImage(img);
-        // } else if (lstView.getFocusModel().getFocusedIndex() == 3) {
-        // Image img = new Image(
-        // "Images/4.jpeg");
-        // imageWorkout.setImage(img);
-        // }
-        lstView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                Image img = new Image("Images/" + newValue + ".jpeg");
-                imageWorkout.setImage(img);
-            }
-
-        });
-        // Image img = new Image("Images/" + lstView.selectedID() + ".jpeg");
-        // imageWorkout.setImage(img);
-    }
 }
