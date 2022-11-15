@@ -1,9 +1,6 @@
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
-
-import javax.imageio.plugins.tiff.GeoTIFFTagSet;
-
-import org.w3c.dom.events.MouseEvent;
 
 import Models.Database;
 import javafx.beans.value.ChangeListener;
@@ -11,14 +8,15 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.MultipleSelectionModel;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
@@ -259,4 +257,12 @@ public class MainController {
 
     }
 
+    @FXML
+    private void formAdd() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Views/FormAdd.fxml"));
+
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }
