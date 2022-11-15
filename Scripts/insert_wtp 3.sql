@@ -20,10 +20,10 @@ VALUES ((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Жим лежа с 
 ((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Поочередное сгибание рук с гантелями'), 2, 3, 12, 6),
 
 
-((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Жим лежа с поднятым головным концом скамьи'), 3, 4, 8, 3),
-((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Жим лежа на горизонтальной скамье'), 3, 3, 10, 3),
-((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Сведение рук на кроссовере вверх'), 3, 3, 12, 3),
-((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Тяга за голову на высоком блоке'), 3, 3, 12, 3),
+((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Тяга гантелей в наклоне'), 3, 3, 10, 3),
+((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Подтягивания широким хватом'), 3, 4, 8, 3),
+((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Тяга верхнего блока к груди обратным хватом'), 3, 3, 10, 3),
+!!!((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Тяга за голову на высоком блоке'), 3, 3, 12, 3),
 ((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Тяга нижнего блока обратным хватом'), 3, 3, 15, 3),
 
 ((SELECT WorkoutID FROM Workouts WHERE WorkoutName = 'Приседания со штангой на плечах'), 2, 3, 10, 4),
