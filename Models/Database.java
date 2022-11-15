@@ -52,7 +52,7 @@ public class Database {
     public static List<String> SelectWorkout(String nameMG) throws SQLException {
         Statement statement = conn.createStatement();
         ResultSet result = statement.executeQuery(
-                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + nameMG + "' ;");
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + nameMG + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;");
         List<String> workout = new ArrayList<String>();
         while (result.next()) {
             String name = result.getString(1);

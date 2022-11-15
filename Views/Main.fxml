@@ -53,8 +53,19 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Справочники">
           <items>
-            <MenuItem fx:id="selectMG" mnemonicParsing="false" onAction="#click_selectMG" text="Группы мышц" />
-            <MenuItem fx:id="selectWorkout" mnemonicParsing="false" onAction="#click_selectWorkout" text="Упражнения" />
+            <MenuItem fx:id="selectMG"  mnemonicParsing="false" onAction="#click_selectMG" text="Группы мышц" />
+            <Menu fx:id="selectWorkout" mnemonicParsing="false" text="Упражнения">
+              <items>
+                <MenuItem fx:id="hands"     mnemonicParsing="false" onAction="#click_selectHands" text="Руки" />
+                <MenuItem fx:id="shoulders" mnemonicParsing="false" onAction="#click_selectShoulders" text="Плечи" />
+                <MenuItem fx:id="chest"     mnemonicParsing="false" onAction="#click_selectChest" text="Грудь" />
+                <MenuItem fx:id="back"      mnemonicParsing="false" onAction="#click_selectBack" text="Спина" />
+                <MenuItem fx:id="foots"     mnemonicParsing="false" onAction="#click_selectFoots" text="Ноги" />
+                <MenuItem fx:id="buttocks"  mnemonicParsing="false" onAction="#click_selectButtocks" text="Ягодицы" />
+                <MenuItem fx:id="press"     mnemonicParsing="false" onAction="#click_selectPress" text="Живот" />
+                <MenuItem fx:id="cardio"    mnemonicParsing="false" onAction="#click_selectCardio" text="Кардио" />
+              </items>
+            </Menu>          
           </items>
         </Menu>
       </menus>
