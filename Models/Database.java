@@ -27,32 +27,22 @@ public class Database {
         System.out.println("Add success!");
     }
 
-    public static List<String> SelectMG() throws SQLException {
+    public static List<String> SelectDB(String query, int columnIndex) throws SQLException {
         Statement statement = conn.createStatement();
-        ResultSet result = statement.executeQuery("SELECT * FROM MuscleGroups mg ;");
-        List<String> mg = new ArrayList<String>();
+        ResultSet result = statement.executeQuery(query);
+        List<String> lst = new ArrayList<String>();
         while (result.next()) {
-            String name = result.getString(2);
-            mg.add(name);
+            String name = result.getString(columnIndex);
+            lst.add(name);
         }
-        return mg;
-    }
-
-    public static List<String> SelectWorkout() throws SQLException {
-        Statement statement = conn.createStatement();
-        ResultSet result = statement.executeQuery("SELECT * FROM Workouts w ;");
-        List<String> workout = new ArrayList<String>();
-        while (result.next()) {
-            String name = result.getString(2);
-            workout.add(name);
-        }
-        return workout;
+        return lst;
     }
 
     public static List<String> SelectWorkout(String nameMG) throws SQLException {
         Statement statement = conn.createStatement();
         ResultSet result = statement.executeQuery(
-                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + nameMG + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;");
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + nameMG
+                        + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;");
         List<String> workout = new ArrayList<String>();
         while (result.next()) {
             String name = result.getString(1);
