@@ -3,6 +3,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import Models.Database;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -23,23 +24,27 @@ import javafx.scene.control.ListView;
 public class MainController {
 
     public MainController() {
-        this.selectMG      = new MenuItem();
-        this.lstView       = new ListView<>();
-        this.leftStatus    = new Label();
-        this.imageWorkout  = new ImageView();
+        this.selectMG = new MenuItem();
+        this.lstView = new ListView<>();
+        this.leftStatus = new Label();
+        this.imageWorkout = new ImageView();
         this.selectWorkout = new Menu();
 
-        this.hands     = new MenuItem();
+        this.hands = new MenuItem();
         this.shoulders = new MenuItem();
-        this.chest     = new MenuItem();
-        this.back      = new MenuItem();
-        this.foots     = new MenuItem();
-        this.buttocks  = new MenuItem();
-        this.press     = new MenuItem();
-        this.cardio    = new MenuItem();
+        this.chest = new MenuItem();
+        this.back = new MenuItem();
+        this.foots = new MenuItem();
+        this.buttocks = new MenuItem();
+        this.press = new MenuItem();
+        this.cardio = new MenuItem();
 
-        this.selectTP  = new MenuItem();
+        this.selectTP = new MenuItem();
+
+        this.func = new Functions();
     }
+
+    private Functions func;
 
     @FXML
     private MenuItem selectMG;
@@ -70,6 +75,8 @@ public class MainController {
     private MenuItem press;
     @FXML
     private MenuItem cardio;
+    @FXML
+    private Menu auth;
 
     @FXML
     private MenuItem selectTP;
@@ -94,12 +101,12 @@ public class MainController {
             lstView.getItems().clear();
         }
 
-        
-        //List<String> workout = Database.SelectWorkout();
-        //ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+        // List<String> workout = Database.SelectWorkout();
+        // ObservableList<String> str =
+        // FXCollections.<String>observableArrayList(workout);
 
-        //lstView.getItems().addAll(str);
-        //selectedItems();
+        // lstView.getItems().addAll(str);
+        // selectedItems();
     }
 
     @FXML
@@ -107,9 +114,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-      
+
         lbl.setText(hands.getText());
-        
+
         List<String> workout = Database.SelectWorkout(hands.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -123,9 +130,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-     
+
         lbl.setText(shoulders.getText());
-        
+
         List<String> workout = Database.SelectWorkout(shoulders.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -139,9 +146,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-     
+
         lbl.setText(chest.getText());
-        
+
         List<String> workout = Database.SelectWorkout(chest.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -155,9 +162,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-     
+
         lbl.setText(back.getText());
-        
+
         List<String> workout = Database.SelectWorkout(back.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -171,9 +178,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-     
+
         lbl.setText(foots.getText());
-        
+
         List<String> workout = Database.SelectWorkout(foots.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -187,9 +194,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-     
+
         lbl.setText(buttocks.getText());
-        
+
         List<String> workout = Database.SelectWorkout(buttocks.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -203,9 +210,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-     
+
         lbl.setText(press.getText());
-        
+
         List<String> workout = Database.SelectWorkout(press.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -219,9 +226,9 @@ public class MainController {
         if (lstView.getItems() != null) {
             lstView.getItems().clear();
         }
-     
+
         lbl.setText(cardio.getText());
-        
+
         List<String> workout = Database.SelectWorkout(cardio.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
@@ -259,10 +266,12 @@ public class MainController {
 
     @FXML
     private void formAdd() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/Views/FormAdd.fxml"));
-
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
+        func.showForm("/Views/FormAdd.fxml", "bazFitness - Добавить", true);
     }
+
+    @FXML
+    void showAuthForm() throws IOException {
+        func.showForm("/Views/FormAuth.fxml", "bazFitness - Окно авторизации", false);
+    }
+
 }

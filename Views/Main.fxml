@@ -18,7 +18,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -67,9 +67,14 @@
                 <MenuItem fx:id="cardio" mnemonicParsing="false" onAction="#click_selectCardio" text="Кардио" />
               </items>
             </Menu>
-            <MenuItem fx:id="selectTP" mnemonicParsing="false"  onAction="#click_selectTP" text="Тренировочные программы" />                
+            <MenuItem fx:id="selectTP" mnemonicParsing="false" onAction="#click_selectTP" text="Тренировочные программы" />
           </items>
         </Menu>
+            <Menu fx:id="auth" mnemonicParsing="false" onAction="#showAuthForm" text="Авторизоваться">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </Menu>
       </menus>
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
@@ -101,7 +106,7 @@
         <AnchorPane>
           <children>
             <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-            <Button layoutX="3.0" layoutY="66.0" mnemonicParsing="false" text="Добавить" onAction="#formAdd" />
+            <Button layoutX="3.0" layoutY="66.0" mnemonicParsing="false" onAction="#formAdd" text="Добавить" />
             <Button layoutX="3.0" layoutY="107.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="73.0" text="Удалить" />
           </children>
         </AnchorPane>

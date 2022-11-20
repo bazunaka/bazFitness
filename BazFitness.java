@@ -27,6 +27,7 @@ public class BazFitness extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/Main.fxml"));
 
         stage.setScene(new Scene(root));
+        stage.setTitle("bazFitness - Фитнес приложение 0.1");
         stage.show();
 
     }
