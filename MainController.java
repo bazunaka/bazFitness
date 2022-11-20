@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -8,20 +9,36 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.MultipleSelectionModel;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
 public class MainController {
 
     public MainController() {
-        this.selectMG = new MenuItem();
-        this.lstView = new ListView<>();
-        this.leftStatus = new Label();
-        this.imageWorkout = new ImageView();
+        this.selectMG      = new MenuItem();
+        this.lstView       = new ListView<>();
+        this.leftStatus    = new Label();
+        this.imageWorkout  = new ImageView();
+        this.selectWorkout = new Menu();
+
+        this.hands     = new MenuItem();
+        this.shoulders = new MenuItem();
+        this.chest     = new MenuItem();
+        this.back      = new MenuItem();
+        this.foots     = new MenuItem();
+        this.buttocks  = new MenuItem();
+        this.press     = new MenuItem();
+        this.cardio    = new MenuItem();
+
+        this.selectTP  = new MenuItem();
     }
 
     @FXML
@@ -34,6 +51,28 @@ public class MainController {
     private Label leftStatus;
     @FXML
     private ImageView imageWorkout;
+    @FXML
+    private Menu selectWorkout;
+
+    @FXML
+    private MenuItem hands;
+    @FXML
+    private MenuItem shoulders;
+    @FXML
+    private MenuItem chest;
+    @FXML
+    private MenuItem back;
+    @FXML
+    private MenuItem foots;
+    @FXML
+    private MenuItem buttocks;
+    @FXML
+    private MenuItem press;
+    @FXML
+    private MenuItem cardio;
+
+    @FXML
+    private MenuItem selectTP;
 
     @FXML
     private void click_selectMG(ActionEvent e) throws SQLException {
@@ -55,19 +94,154 @@ public class MainController {
             lstView.getItems().clear();
         }
 
-        lbl.setText("Упражнения");
-        List<String> workout = Database.SelectWorkout();
+        
+        //List<String> workout = Database.SelectWorkout();
+        //ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+
+        //lstView.getItems().addAll(str);
+        //selectedItems();
+    }
+
+    @FXML
+    private void click_selectHands(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+      
+        lbl.setText(hands.getText());
+        
+        List<String> workout = Database.SelectWorkout(hands.getText());
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
         lstView.getItems().addAll(str);
         selectedItems();
 
-        // WebView browser = new WebView();
+    }
 
-        // WebEngine webEngine = browser.getEngine();
+    @FXML
+    private void click_selectShoulders(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+     
+        lbl.setText(shoulders.getText());
+        
+        List<String> workout = Database.SelectWorkout(shoulders.getText());
+        ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
-        // webEngine.load("http://ya.ru");
+        lstView.getItems().addAll(str);
+        selectedItems();
 
+    }
+
+    @FXML
+    private void click_selectChest(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+     
+        lbl.setText(chest.getText());
+        
+        List<String> workout = Database.SelectWorkout(chest.getText());
+        ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
+
+    }
+
+    @FXML
+    private void click_selectBack(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+     
+        lbl.setText(back.getText());
+        
+        List<String> workout = Database.SelectWorkout(back.getText());
+        ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
+
+    }
+
+    @FXML
+    private void click_selectFoots(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+     
+        lbl.setText(foots.getText());
+        
+        List<String> workout = Database.SelectWorkout(foots.getText());
+        ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
+
+    }
+
+    @FXML
+    private void click_selectButtocks(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+     
+        lbl.setText(buttocks.getText());
+        
+        List<String> workout = Database.SelectWorkout(buttocks.getText());
+        ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
+
+    }
+
+    @FXML
+    private void click_selectPress(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+     
+        lbl.setText(press.getText());
+        
+        List<String> workout = Database.SelectWorkout(press.getText());
+        ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
+
+    }
+
+    @FXML
+    private void click_selectCardio(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+     
+        lbl.setText(cardio.getText());
+        
+        List<String> workout = Database.SelectWorkout(cardio.getText());
+        ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
+
+    }
+
+    @FXML
+    private void click_selectTP(ActionEvent e) throws SQLException {
+        if (lstView.getItems() != null) {
+            lstView.getItems().clear();
+        }
+
+        lbl.setText(selectTP.getText());
+        List<String> tp = Database.SelectTP();
+        ObservableList<String> str = FXCollections.<String>observableArrayList(tp);
+
+        lstView.getItems().addAll(str);
+        selectedItems();
     }
 
     @FXML
@@ -84,35 +258,11 @@ public class MainController {
     }
 
     @FXML
-    private void someFunc() throws SQLException {
-        System.out.println(leftStatus.getText());
-        // if (lstView.getFocusModel().getFocusedIndex() == 0) {
-        // Image img = new Image(
-        // "Images/1.png");
-        // imageWorkout.setImage(img);
-        // } else if (lstView.getFocusModel().getFocusedIndex() == 1) {
-        // Image img = new Image(
-        // "Images/2.jpeg");
-        // imageWorkout.setImage(img);
-        // } else if (lstView.getFocusModel().getFocusedIndex() == 2) {
-        // Image img = new Image(
-        // "Images/3.png");
-        // imageWorkout.setImage(img);
-        // } else if (lstView.getFocusModel().getFocusedIndex() == 3) {
-        // Image img = new Image(
-        // "Images/4.jpeg");
-        // imageWorkout.setImage(img);
-        // }
-        lstView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+    private void formAdd() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Views/FormAdd.fxml"));
 
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                Image img = new Image("Images/" + newValue + ".jpeg");
-                imageWorkout.setImage(img);
-            }
-
-        });
-        // Image img = new Image("Images/" + lstView.selectedID() + ".jpeg");
-        // imageWorkout.setImage(img);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
