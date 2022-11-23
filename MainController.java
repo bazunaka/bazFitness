@@ -137,7 +137,10 @@ public class MainController {
 
         lbl.setText(chest.getText());
 
-        List<String> workout = Database.SelectWorkout(chest.getText());
+        List<String> workout = Database.SelectDB(
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + chest.getText()
+                        + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;",
+                1);
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
         lstView.getItems().addAll(str);
@@ -147,13 +150,14 @@ public class MainController {
 
     @FXML
     private void click_selectBack(ActionEvent e) throws SQLException {
-        if (lstView.getItems() != null) {
-            lstView.getItems().clear();
-        }
+        check_lstView();
 
         lbl.setText(back.getText());
 
-        List<String> workout = Database.SelectWorkout(back.getText());
+        List<String> workout = Database.SelectDB(
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + back.getText()
+                        + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;",
+                1);
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
         lstView.getItems().addAll(str);
@@ -163,13 +167,14 @@ public class MainController {
 
     @FXML
     private void click_selectFoots(ActionEvent e) throws SQLException {
-        if (lstView.getItems() != null) {
-            lstView.getItems().clear();
-        }
+        check_lstView();
 
         lbl.setText(foots.getText());
 
-        List<String> workout = Database.SelectWorkout(foots.getText());
+        List<String> workout = Database.SelectDB(
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + foots.getText()
+                        + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;",
+                1);
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
         lstView.getItems().addAll(str);
@@ -179,13 +184,14 @@ public class MainController {
 
     @FXML
     private void click_selectButtocks(ActionEvent e) throws SQLException {
-        if (lstView.getItems() != null) {
-            lstView.getItems().clear();
-        }
+        check_lstView();
 
         lbl.setText(buttocks.getText());
 
-        List<String> workout = Database.SelectWorkout(buttocks.getText());
+        List<String> workout = Database.SelectDB(
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + buttocks.getText()
+                        + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;",
+                1);
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
         lstView.getItems().addAll(str);
@@ -195,13 +201,14 @@ public class MainController {
 
     @FXML
     private void click_selectPress(ActionEvent e) throws SQLException {
-        if (lstView.getItems() != null) {
-            lstView.getItems().clear();
-        }
+        check_lstView();
 
         lbl.setText(press.getText());
 
-        List<String> workout = Database.SelectWorkout(press.getText());
+        List<String> workout = Database.SelectDB(
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + press.getText()
+                        + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;",
+                1);
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
         lstView.getItems().addAll(str);
@@ -211,13 +218,14 @@ public class MainController {
 
     @FXML
     private void click_selectCardio(ActionEvent e) throws SQLException {
-        if (lstView.getItems() != null) {
-            lstView.getItems().clear();
-        }
+        check_lstView();
 
         lbl.setText(cardio.getText());
 
-        List<String> workout = Database.SelectWorkout(cardio.getText());
+        List<String> workout = Database.SelectDB(
+                "SELECT w.WorkoutName FROM Workouts w, MuscleGroups mg WHERE mg.GroupName = '" + cardio.getText()
+                        + "' AND w.GroupID = mg.GroupID ORDER BY w.WorkoutName ASC;",
+                1);
         ObservableList<String> str = FXCollections.<String>observableArrayList(workout);
 
         lstView.getItems().addAll(str);
@@ -227,12 +235,10 @@ public class MainController {
 
     @FXML
     private void click_selectTP(ActionEvent e) throws SQLException {
-        if (lstView.getItems() != null) {
-            lstView.getItems().clear();
-        }
+        check_lstView();
 
         lbl.setText(selectTP.getText());
-        List<String> tp = Database.SelectTP();
+        List<String> tp = Database.SelectDB("SELECT * FROM TrainingPlan tg ;", 2);
         ObservableList<String> str = FXCollections.<String>observableArrayList(tp);
 
         lstView.getItems().addAll(str);

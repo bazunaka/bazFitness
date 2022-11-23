@@ -7,6 +7,6 @@ public class BodyParametrs {
     public double IMT;
     public double FatPer;
     public String DateRecord; // datype! maybe Date
-    // public int AccountID;
+    public int AccountID;
 
 }

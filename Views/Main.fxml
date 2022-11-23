@@ -18,7 +18,9 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<VBox prefHeight="600.0" prefWidth="900.0"
+  xmlns="http://javafx.com/javafx/18"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -70,11 +72,12 @@
             <MenuItem fx:id="selectTP" mnemonicParsing="false" onAction="#click_selectTP" text="Тренировочные программы" />
           </items>
         </Menu>
-            <Menu fx:id="auth" mnemonicParsing="false" onAction="#showAuthForm" text="Авторизоваться">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-               </items>
-            </Menu>
+        <Menu fx:id="auth" mnemonicParsing="false" text="Авторизация">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#showAuthForm" text="Авторизоваться" />
+            <MenuItem fx:id="addAccount" mnemonicParsing="false" text="Добавить пользователя" />
+          </items>
+        </Menu>
       </menus>
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
