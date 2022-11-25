@@ -28,6 +28,7 @@ public class BazFitness extends Application {
 
         stage.setScene(new Scene(root));
         stage.setTitle("bazFitness - Фитнес приложение 0.1");
+        stage.setResizable(false);
         stage.show();
 
     }
