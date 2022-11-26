@@ -1,3 +1,4 @@
+package Functions;
 import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
@@ -7,7 +8,7 @@ import javafx.stage.Stage;
 
 public class Functions {
 
-    void showForm(String pathFile, String titleName, Boolean resize) throws IOException {
+    public void showForm(String pathFile, String titleName, Boolean resize) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(pathFile));
 
         Stage stage = new Stage();

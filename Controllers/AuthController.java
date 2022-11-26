@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import Models.Accounts;
+
 public class AuthController {
 
     @FXML
@@ -15,5 +17,7 @@ public class AuthController {
 
     @FXML
     private PasswordField password;
+
+    
 
 }
