@@ -27,7 +27,7 @@
       </AnchorPane>
       <AnchorPane prefHeight="415.0" prefWidth="700.0" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="60.0">
          <children>
-            <GridPane gridLinesVisible="true" layoutX="102.0" layoutY="64.0" prefHeight="415.0" prefWidth="700.0" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <GridPane disable="true" gridLinesVisible="true" layoutX="102.0" layoutY="64.0" prefHeight="415.0" prefWidth="700.0" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -104,7 +104,7 @@
       </AnchorPane>
       <AnchorPane layoutY="369.0" prefHeight="25.0" prefWidth="594.0" style="-fx-background-color: #222831 #222831;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label layoutX="45.0" layoutY="4.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="20.0" text="Незарегистрированный пользователь" textFill="#eeeeee" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0" />
+            <Label fx:id="identy" layoutX="45.0" layoutY="4.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="20.0" text="Незарегистрированный пользователь" textFill="#eeeeee" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0" />
             <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="251.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="240.0">
                <image>
                   <Image url="@../Images/errorAccount.png" />

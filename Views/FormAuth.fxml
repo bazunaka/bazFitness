@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="328.0" style="-fx-background-color: f0f0f0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AuthController">
    <children>
-      <Button fx:id="authButton" layoutX="109.0" layoutY="142.0" mnemonicParsing="false" style="-fx-background-color: #00adb5;" text="Авторизоваться" textFill="#eeeeee" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="109.0" AnchorPane.rightAnchor="109.0" />
+      <Button fx:id="authButton" layoutX="109.0" layoutY="142.0" mnemonicParsing="false" onAction="#checkAuth" style="-fx-background-color: #00adb5;" text="Авторизоваться" textFill="#eeeeee" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="109.0" AnchorPane.rightAnchor="109.0" />
       <PasswordField fx:id="password" layoutX="64.0" layoutY="91.0" prefHeight="26.0" prefWidth="200.0" promptText="Введите пароль" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" />
       <TextField fx:id="login" layoutX="64.0" layoutY="51.0" prefWidth="200.0" promptText="Введите логин" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" />
    </children>

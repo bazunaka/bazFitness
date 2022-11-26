@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Functions {
@@ -15,6 +16,7 @@ public class Functions {
         stage.setScene(new Scene(root));
         stage.setTitle(titleName);
         stage.setResizable(resize);
+        stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
     }
 }

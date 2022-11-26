@@ -1,6 +1,7 @@
 package Controllers;
 
 import java.io.IOException;
+import java.lang.ModuleLayer.Controller;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -35,6 +36,9 @@ public class MainController {
     @FXML
     private Label settings;
 
+    @FXML
+    private Label identy;
+    
     //@FXML
     //void showAuthForm(ActionEvent event) {
 
@@ -49,5 +53,4 @@ public class MainController {
     void showAuthForm() throws IOException {
         func.showForm("/Views/FormAuth.fxml", "bazFitness - Окно авторизации", false);
     }
-
 }
