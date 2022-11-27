@@ -1,8 +1,6 @@
 package Controllers;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -12,6 +10,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import Models.Accounts;
+import Functions.Functions;
+import Controllers.MainController;
 
 public class AuthController {
 
@@ -26,8 +26,15 @@ public class AuthController {
 
     private Accounts accounts = new Accounts();
 
+    public AuthController() {
+        this.func = new Functions();
+    }
+
+    private Functions func;
+    public MainController mainc;
+
     @FXML
-    void checkAuth() throws IOException, ClassNotFoundException, SQLException {
+    String checkAuth() throws IOException, ClassNotFoundException, SQLException {
         accounts.AccountName = login.getText();
         accounts.AccountPswd = password.getText();
         accounts.AccountQuery = "SELECT COUNT(*) FROM Accounts WHERE AccountName = '" + accounts.AccountName + "' And AccountPswd = '" + accounts.AccountPswd + "';";
@@ -36,7 +43,19 @@ public class AuthController {
             Stage stage = (Stage) authButton.getScene().getWindow();
             stage.close();
 
-
+            func.showForm("/Views/Main.fxml", "bazFitness - Фитнес приложение 0.1", false);
         };
+
+        return accounts.AccountName;
+    }
+
+    @FXML
+    void changeColor() {
+        authButton.setStyle("-fx-background-color: #393e46;");
+    }
+
+    @FXML
+    void changeDefaultColor() {
+        authButton.setStyle("-fx-background-color: #00adb5;");
     }
 }

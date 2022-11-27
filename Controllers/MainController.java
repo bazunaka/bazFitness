@@ -1,28 +1,28 @@
 package Controllers;
 
 import java.io.IOException;
-import java.lang.ModuleLayer.Controller;
 import java.sql.SQLException;
 import java.util.List;
 
-import Functions.Functions;
-import Models.Database;
-
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.MultipleSelectionModel;
-import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.image.ImageView;
+import Models.Database;
 
 public class MainController {
+
+    @FXML
+    private Label references;
+
+    @FXML
+    public ImageView referencesImage;
+
+    @FXML
+    private Label account;
+    
+    @FXML
+    private Label training;
 
     @FXML
     private Label analyze;
@@ -37,20 +37,22 @@ public class MainController {
     private Label settings;
 
     @FXML
-    private Label identy;
-    
-    //@FXML
-    //void showAuthForm(ActionEvent event) {
+    public Label identy;
 
-    //}
-    public MainController() {
-        this.func = new Functions();
+    @FXML
+    protected void initialize() throws ClassNotFoundException, IOException, SQLException {
+        List<String> menus = Database.SelectDB("SELECT MenuName FROM Menus;", 1);
+        references.setText((String) menus.get(0));
+        account.setText((String) menus.get(1));
+        training.setText((String) menus.get(2));
+        analyze.setText((String) menus.get(3));
+        nutrition.setText((String) menus.get(4));
+        settings.setText((String) menus.get(5));
     }
-
-    private Functions func;
 
     @FXML
     void showAuthForm() throws IOException {
-        func.showForm("/Views/FormAuth.fxml", "bazFitness - Окно авторизации", false);
+
     }
+    
 }

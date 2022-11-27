@@ -16,6 +16,9 @@ public class BazFitness extends Application {
      * @throws ClassNotFoundException
      * @throws IOException
      */
+
+
+
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
         Database.Connect();
 
@@ -24,12 +27,10 @@ public class BazFitness extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/Views/Main.fxml"));
-
+        Parent root = FXMLLoader.load(getClass().getResource("/Views/FormAuth.fxml")); //"/Views/Main.fxml"
         stage.setScene(new Scene(root));
-        stage.setTitle("bazFitness - Фитнес приложение 0.1");
+        stage.setTitle("bazFitness - Окно авторизации"); //"bazFitness - Фитнес приложение 0.1 - незарегистрировано!"
         stage.setResizable(false);
         stage.show();
-
     }
 }
