@@ -15,31 +15,46 @@ import Functions.Functions;
 public class MainController {
 
     @FXML
-    private Label references;
-
-    @FXML
-    public ImageView referencesImage;
-
-    @FXML
     private Label account;
 
     @FXML
-    private Label training;
+    private ImageView accountImage;
 
     @FXML
     private Label analyze;
 
     @FXML
+    private ImageView analyzeImage;
+
+    @FXML
     private Button authButton;
+
+    @FXML
+    private Label identy;
 
     @FXML
     private Label nutrition;
 
     @FXML
+    private ImageView nutritionImage;
+
+    @FXML
+    private Label references;
+
+    @FXML
+    private ImageView referencesImage;
+
+    @FXML
     private Label settings;
 
     @FXML
-    public Label identy;
+    private ImageView settingsImage;
+
+    @FXML
+    private Label training;
+
+    @FXML
+    private ImageView trainingImage;
 
     @FXML
     protected void initialize() throws ClassNotFoundException, IOException, SQLException {

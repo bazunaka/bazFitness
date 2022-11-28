@@ -1,7 +1,23 @@
-.referencesImage {
-    -fx-opacity: 1;
+.referencesImage:hover {
+    -fx-opacity: 0.5;
 }
 
-.referencesImage:hover {
-    -fx-image: url(/Images/nutrition.png);
+.accountImage:hover {
+    -fx-opacity: 0.5;
 }
+
+.analyzeImage:hover {
+        -fx-opacity: 0.5;
+    }
+
+.nutritionImage:hover {
+        -fx-opacity: 0.5;
+    }
+
+.settingsImage:hover {
+        -fx-opacity: 0.5;
+    }
+
+.trainingImage:hover {
+        -fx-opacity: 0.5;
+    }
