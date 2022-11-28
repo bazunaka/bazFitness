@@ -8,7 +8,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import Models.Database;
+import Functions.Functions;
 
 public class MainController {
 
@@ -20,7 +22,7 @@ public class MainController {
 
     @FXML
     private Label account;
-    
+
     @FXML
     private Label training;
 
@@ -48,11 +50,25 @@ public class MainController {
         analyze.setText((String) menus.get(3));
         nutrition.setText((String) menus.get(4));
         settings.setText((String) menus.get(5));
+
+        referencesImage.getStyleClass().add("referencesImage");
     }
+
+    public MainController() {
+        this.func = new Functions();
+    }
+
+    private Functions func;
 
     @FXML
     void showAuthForm() throws IOException {
 
     }
-    
+
+    @FXML
+    void showReferencesForm() {
+        // func.showForm("Views/FormReferences", "Справочники", false);
+        System.out.println("clicked!!!");
+    }
+
 }

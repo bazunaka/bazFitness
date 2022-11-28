@@ -11,7 +11,6 @@ import java.sql.SQLException;
 
 import Models.Accounts;
 import Functions.Functions;
-import Controllers.MainController;
 
 public class AuthController {
 
@@ -37,14 +36,16 @@ public class AuthController {
     String checkAuth() throws IOException, ClassNotFoundException, SQLException {
         accounts.AccountName = login.getText();
         accounts.AccountPswd = password.getText();
-        accounts.AccountQuery = "SELECT COUNT(*) FROM Accounts WHERE AccountName = '" + accounts.AccountName + "' And AccountPswd = '" + accounts.AccountPswd + "';";
+        accounts.AccountQuery = "SELECT COUNT(*) FROM Accounts WHERE AccountName = '" + accounts.AccountName
+                + "' And AccountPswd = '" + accounts.AccountPswd + "';";
 
-        if(accounts.CheckAccount(accounts.AccountQuery, 1, Models.Database.Connect())) {
+        if (accounts.CheckAccount(accounts.AccountQuery, 1, Models.Database.Connect())) {
             Stage stage = (Stage) authButton.getScene().getWindow();
             stage.close();
 
             func.showForm("/Views/Main.fxml", "bazFitness - Фитнес приложение 0.1", false);
-        };
+        }
+        ;
 
         return accounts.AccountName;
     }

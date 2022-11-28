@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #eeeeee;" stylesheets="@../Stylesheets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #eeeeee;" stylesheets="@../Stylesheets/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
    <children>
       <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="60.0" prefWidth="572.0" style="-fx-background-color: #222831;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -38,12 +38,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView id="references" fx:id="referencesImage" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ImageView fx:id="referencesImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showReferencesForm" opacity="0.9" preserveRatio="true" styleClass="referencesImage" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../Images/references.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="references" opacity="0.99" textFill="#222831" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                  <Label fx:id="references" opacity="0.99" styleClass="references" stylesheets="@../Stylesheets/style.css" textFill="#222831" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                      <font>
                         <Font size="14.0" />
                      </font>

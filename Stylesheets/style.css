@@ -1,1 +1,7 @@
-authButton:pressed { -fx-background-color: black; }
+.referencesImage {
+    -fx-opacity: 1;
+}
+
+.referencesImage:hover {
+    -fx-image: url(/Images/nutrition.png);
+}
