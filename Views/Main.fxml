@@ -38,7 +38,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fx:id="referencesImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showReferencesForm" opacity="0.9" preserveRatio="true" styleClass="referencesImage" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ImageView fx:id="referencesImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showChildForm" opacity="0.9" preserveRatio="true" styleClass="referencesImage" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../Images/references.png" />
                      </image>
@@ -48,7 +48,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="accountImage" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" styleClass="accountImage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ImageView fx:id="accountImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showChildForm" pickOnBounds="true" preserveRatio="true" styleClass="accountImage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../Images/account.png" />
                      </image>
@@ -58,7 +58,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="trainingImage" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" styleClass="trainingImage" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ImageView fx:id="trainingImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showChildForm" pickOnBounds="true" preserveRatio="true" styleClass="trainingImage" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../Images/training.png" />
                      </image>
@@ -68,17 +68,17 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="analyzeImage" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" styleClass="analyzeImage" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ImageView fx:id="analyzeImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showChildForm" pickOnBounds="true" preserveRatio="true" styleClass="analyzeImage" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../Images/analyze.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="nutritionImage" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" styleClass="nutritionImage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ImageView fx:id="nutritionImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showChildForm" pickOnBounds="true" preserveRatio="true" styleClass="nutritionImage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../Images/nutrition.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="settingsImage" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" styleClass="settingsImage" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ImageView fx:id="settingsImage" fitHeight="96.0" fitWidth="96.0" onMousePressed="#showChildForm" pickOnBounds="true" preserveRatio="true" styleClass="settingsImage" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../Images/settings.png" />
                      </image>

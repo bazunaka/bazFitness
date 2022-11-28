@@ -81,9 +81,20 @@ public class MainController {
     }
 
     @FXML
-    void showReferencesForm() {
-        // func.showForm("Views/FormReferences", "Справочники", false);
-        System.out.println("clicked!!!");
+    void showChildForm() throws IOException {       
+        if(referencesImage.isPressed()) {
+            func.showForm("Views/FormReferences", references.getText(), false);
+        } else if(accountImage.isPressed()) {
+            func.showForm("Views/FormAccount", account.getText(), false);
+        } else if(trainingImage.isPressed()) {
+            func.showForm("Views/FormTraining", training.getText(), false);
+        } else if(analyzeImage.isPressed()) {
+            func.showForm("Views/FormAnalyze", analyze.getText(), false);
+        } else if(nutritionImage.isPressed()) {
+            func.showForm("Views/FormNutrition", nutrition.getText(), false);
+        } else {
+            func.showForm("Views/FormSettings", settings.getText(), false);
+        }
     }
 
 }
