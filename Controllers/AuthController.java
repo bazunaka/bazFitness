@@ -41,7 +41,7 @@ public class AuthController {
 
         if (accounts.CheckAccount(accounts.AccountQuery, 1, Models.Database.Connect())) {
             Stage stage = (Stage) authButton.getScene().getWindow();
-            stage.close();
+            stage.hide();
 
             func.showForm("/Views/Main.fxml", "bazFitness - Фитнес приложение 0.1", false);
         }

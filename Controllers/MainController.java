@@ -5,10 +5,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-
+import javafx.stage.Stage;
 import Models.Database;
 import Functions.Functions;
 
@@ -81,19 +84,20 @@ public class MainController {
     }
 
     @FXML
-    void showChildForm() throws IOException {       
-        if(referencesImage.isPressed()) {
-            func.showForm("Views/FormReferences", references.getText(), false);
-        } else if(accountImage.isPressed()) {
-            func.showForm("Views/FormAccount", account.getText(), false);
-        } else if(trainingImage.isPressed()) {
-            func.showForm("Views/FormTraining", training.getText(), false);
-        } else if(analyzeImage.isPressed()) {
-            func.showForm("Views/FormAnalyze", analyze.getText(), false);
-        } else if(nutritionImage.isPressed()) {
-            func.showForm("Views/FormNutrition", nutrition.getText(), false);
+    void showChildForm() throws IOException {
+
+        if (referencesImage.isPressed()) {
+            func.showForm("/Views/FormReferences.fxml", references.getText(), false);
+        } else if (accountImage.isPressed()) {
+            func.showForm("/Views/FormAccount.fxml", account.getText(), false);
+        } else if (trainingImage.isPressed()) {
+            func.showForm("/Views/FormTraining.fxml", training.getText(), false);
+        } else if (analyzeImage.isPressed()) {
+            func.showForm("/Views/FormAnalyze.fxml", analyze.getText(), false);
+        } else if (nutritionImage.isPressed()) {
+            func.showForm("/Views/FormNutrition.fxml", nutrition.getText(), false);
         } else {
-            func.showForm("Views/FormSettings", settings.getText(), false);
+            func.showForm("/Views/FormSettings.fxml", settings.getText(), false);
         }
     }
 
