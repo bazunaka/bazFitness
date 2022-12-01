@@ -15,9 +15,9 @@
          <children>
             <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button fx:id="addRecord" mnemonicParsing="false" text="Добавить запись" textFill="#222831" />
-                  <Button fx:id="editRecord" mnemonicParsing="false" text="Редактировать запись" textFill="#222831" />
-                  <Button fx:id="deleteRecord" mnemonicParsing="false" text="Удалить запись" textFill="#222831" />
+                  <Button fx:id="addRecord" mnemonicParsing="false" style="-fx-background-color: #00ADB5;" text="Добавить запись" textFill="#222831" />
+                  <Button fx:id="editRecord" mnemonicParsing="false" style="-fx-background-color: #00ADB5;" text="Редактировать запись" textFill="#222831" />
+                  <Button fx:id="deleteRecord" mnemonicParsing="false" style="-fx-background-color: #00ADB5;" text="Удалить запись" textFill="#222831" />
                </children>
                <padding>
                   <Insets right="10.0" />
