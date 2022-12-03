@@ -29,6 +29,9 @@ public class AccountController {
     private TextField fatEdit;
 
     @FXML
+    private TextField imtEdit;
+
+    @FXML
     private TextField heightEdit;
 
     @FXML
