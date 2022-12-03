@@ -17,7 +17,7 @@
          <children>
             <HBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="60.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" text="Сохранить изменения" textFill="#222831">
+                  <Button fx:id="saveChanges" alignment="CENTER" mnemonicParsing="false" onAction="#saveChanges" text="Сохранить изменения" textFill="#222831">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>

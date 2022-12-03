@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,21 +20,62 @@
                      <children>
                         <LineChart layoutX="14.0" layoutY="15.0" prefHeight="252.0" prefWidth="550.0" title="Динамика изменения веса">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" />
+                            <CategoryAxis label="Дата" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis autoRanging="false" lowerBound="60.0" minorTickCount="1" side="LEFT" upperBound="90.0" />
+                            <NumberAxis autoRanging="false" label="кг." lowerBound="60.0" minorTickCount="1" side="LEFT" upperBound="90.0" />
                           </yAxis>
                         </LineChart>
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="ИМТ">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <LineChart layoutX="6.0" layoutY="14.0" prefHeight="240.0" prefWidth="551.0" title="Динамика изменения ИМТ">
+                          <xAxis>
+                            <CategoryAxis label="Дата" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis forceZeroInRange="false" lowerBound="20.0" minorTickCount="1" side="LEFT" upperBound="40.0" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </AnchorPane>
             </content>
           </Tab>
+            <Tab text="Общий вес">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BarChart layoutX="14.0" layoutY="22.0" prefHeight="244.0" prefWidth="553.0">
+                          <xAxis>
+                            <CategoryAxis label="Дата" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis forceZeroInRange="false" label="кг." lowerBound="3000.0" minorTickCount="500" side="LEFT" upperBound="11000.0" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Дистанция">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Группы мышц">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <PieChart layoutX="139.0" layoutY="17.0" prefHeight="244.0" prefWidth="301.0" title="Тренировки по группам мышц" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </children>

@@ -1,17 +1,11 @@
 package Controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class AccountController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private TextField ageEdit;
@@ -29,16 +23,19 @@ public class AccountController {
     private TextField fatEdit;
 
     @FXML
-    private TextField imtEdit;
+    private TextField heightEdit;
 
     @FXML
-    private TextField heightEdit;
+    private TextField imtEdit;
 
     @FXML
     private TextField nameEdit;
 
     @FXML
     private TextField pressEdit;
+
+    @FXML
+    private Button saveChanges;
 
     @FXML
     private TextField secondnameEdit;
@@ -51,4 +48,10 @@ public class AccountController {
 
     }
 
+    @FXML
+    void saveChanges(ActionEvent event) {
+        //Save changes in table. Input String array from Edits.
+    }
+
 }
+

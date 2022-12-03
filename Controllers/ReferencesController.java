@@ -1,19 +1,12 @@
 package Controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeView;
 
 public class ReferencesController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button addRecord;
@@ -33,6 +26,21 @@ public class ReferencesController {
     @FXML
     void initialize() {
 
+    }
+
+    @FXML
+    void addRecord(ActionEvent event) {
+        //Add record in table 
+    }
+
+    @FXML
+    void deleteRecord(ActionEvent event) {
+        //Delete record from table
+    }
+
+    @FXML
+    void editRecord(ActionEvent event) {
+        //Edit record in table
     }
 
 }

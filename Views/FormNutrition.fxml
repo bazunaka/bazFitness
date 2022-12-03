@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-3.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #222831;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="8.0" layoutY="10.0" prefHeight="60.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Сохранить запись">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="7.0" layoutY="60.0" prefHeight="338.0" prefWidth="590.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView layoutY="6.0" prefHeight="330.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ComboBox editable="true" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="175.0" promptText="Выберите прием пищи" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                  <ComboBox editable="true" layoutX="14.0" layoutY="72.0" prefHeight="26.0" prefWidth="175.0" promptText="Выберите продукт" />
+                  <ComboBox editable="true" layoutX="198.0" layoutY="73.0" prefHeight="26.0" prefWidth="95.0" promptText="Порция" />
+                  <Label layoutX="339.0" layoutY="55.0" text="Ж/Б/У" />
+                  <Label layoutX="423.0" layoutY="55.0" text="Калории" />
+                  <TextField alignment="CENTER" editable="false" layoutX="314.0" layoutY="72.0" prefHeight="26.0" prefWidth="85.0" promptText="Ж/Б/У" />
+                  <TextField alignment="CENTER" editable="false" layoutX="411.0" layoutY="73.0" prefHeight="26.0" prefWidth="85.0" promptText="0" />
+                  <ComboBox editable="true" layoutX="14.0" layoutY="105.0" prefHeight="26.0" prefWidth="175.0" promptText="Выберите продукт" />
+                  <ComboBox editable="true" layoutX="14.0" layoutY="137.0" prefHeight="26.0" prefWidth="175.0" promptText="Выберите продукт" />
+                  <ComboBox editable="true" layoutX="14.0" layoutY="169.0" prefHeight="26.0" prefWidth="175.0" promptText="Выберите продукт" />
+                  <ComboBox editable="true" layoutX="198.0" layoutY="105.0" prefHeight="26.0" prefWidth="95.0" promptText="Порция" />
+                  <ComboBox editable="true" layoutX="198.0" layoutY="137.0" prefHeight="26.0" prefWidth="95.0" promptText="Порция" />
+                  <ComboBox editable="true" layoutX="198.0" layoutY="169.0" prefHeight="26.0" prefWidth="95.0" promptText="Порция" />
+                  <TextField alignment="CENTER" editable="false" layoutX="314.0" layoutY="105.0" prefHeight="26.0" prefWidth="85.0" promptText="Ж/Б/У" />
+                  <TextField alignment="CENTER" editable="false" layoutX="314.0" layoutY="137.0" prefHeight="26.0" prefWidth="85.0" promptText="Ж/Б/У" />
+                  <TextField alignment="CENTER" editable="false" layoutX="314.0" layoutY="169.0" prefHeight="26.0" prefWidth="85.0" promptText="Ж/Б/У" />
+                  <TextField alignment="CENTER" editable="false" layoutX="411.0" layoutY="105.0" prefHeight="26.0" prefWidth="85.0" promptText="0" />
+                  <TextField alignment="CENTER" editable="false" layoutX="411.0" layoutY="137.0" prefHeight="26.0" prefWidth="85.0" promptText="0" />
+                  <TextField alignment="CENTER" editable="false" layoutX="411.0" layoutY="169.0" prefHeight="26.0" prefWidth="85.0" promptText="0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
