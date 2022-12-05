@@ -14,9 +14,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #eeeeee;" stylesheets="@../Stylesheets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
    <children>
-      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="60.0" prefWidth="572.0" style="-fx-background-color: #222831;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="60.0" prefWidth="572.0" styleClass="headerAnchorPane" stylesheets="@../Stylesheets/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="authButton" layoutX="449.0" layoutY="15.0" mnemonicParsing="false" onAction="#showAuthForm" style="-fx-background-color: #00adb5;" text="Зарегистрироваться" textFill="#eeeeee" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+            <Button fx:id="authButton" layoutX="449.0" layoutY="15.0" mnemonicParsing="false" onAction="#showAuthForm" styleClass="buttons" stylesheets="@../Stylesheets/style.css" text="Зарегистрироваться" textFill="#eeeeee" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font></Button>
             <MenuButton layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #00ADB5;" text="Меню" textFill="#eeeeee">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
@@ -25,7 +28,7 @@
             </MenuButton>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="415.0" prefWidth="700.0" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="60.0">
+      <AnchorPane prefHeight="415.0" prefWidth="700.0" styleClass="mainAnchorPane" stylesheets="@../Stylesheets/style.css" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="60.0">
          <children>
             <GridPane gridLinesVisible="true" layoutX="102.0" layoutY="64.0" prefHeight="415.0" prefWidth="700.0" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columnConstraints>

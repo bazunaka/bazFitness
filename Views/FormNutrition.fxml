@@ -10,14 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="-3.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #222831;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="-3.0" prefHeight="60.0" prefWidth="600.0" styleClass="headerAnchorPane" stylesheets="@../Stylesheets/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER_RIGHT" layoutX="8.0" layoutY="10.0" prefHeight="60.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button mnemonicParsing="false" text="Сохранить запись">
+                  <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@../Stylesheets/style.css" text="Сохранить запись">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
@@ -33,7 +32,7 @@
                   <ListView layoutY="6.0" prefHeight="330.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="mainAnchorPane" stylesheets="@../Stylesheets/style.css">
                <children>
                   <ComboBox editable="true" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="175.0" promptText="Выберите прием пищи" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
                   <ComboBox editable="true" layoutX="14.0" layoutY="72.0" prefHeight="26.0" prefWidth="175.0" promptText="Выберите продукт" />

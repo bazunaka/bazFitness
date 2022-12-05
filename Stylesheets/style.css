@@ -23,6 +23,17 @@
 }
 
 .headerAnchorPane {
+    -fx-pref-weight: auto;
     -fx-pref-height: 60;
     -fx-background-color: #222831;
+}
+
+.buttons {
+    -fx-background-color: #00adb5;
+    -fx-text-fill: #eeeeee;
+    -fx-font-family: Helvetica;
+}
+
+.mainAnchorPane {
+    -fx-background-color: #eeeeee;
 }

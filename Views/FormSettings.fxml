@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SettingsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SettingsController">
    <children>
       <TabPane layoutX="8.0" layoutY="63.0" prefHeight="324.0" prefWidth="582.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -29,6 +29,6 @@
           </Tab>
         </tabs>
       </TabPane>
-      <AnchorPane layoutX="14.0" layoutY="4.0" prefHeight="54.0" prefWidth="569.0" styleClass="headerAnchorPane" stylesheets="@../Stylesheets/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="14.0" layoutY="4.0" prefHeight="44.0" prefWidth="533.0" styleClass="headerAnchorPane" stylesheets="@../Stylesheets/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

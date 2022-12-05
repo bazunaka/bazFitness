@@ -85,14 +85,19 @@ public class MainController {
         if (referencesImage.isPressed()) {
             func.showForm("/Views/FormReferences.fxml", references.getText(), false);
         } else if (accountImage.isPressed()) {
+            
             func.showForm("/Views/FormAccount.fxml", account.getText(), false);
         } else if (trainingImage.isPressed()) {
+            
             func.showForm("/Views/FormTraining.fxml", training.getText(), false);
         } else if (analyzeImage.isPressed()) {
+            
             func.showForm("/Views/FormAnalyze.fxml", analyze.getText(), false);
         } else if (nutritionImage.isPressed()) {
+            
             func.showForm("/Views/FormNutrition.fxml", nutrition.getText(), false);
         } else {
+            
             func.showForm("/Views/FormSettings.fxml", settings.getText(), false);
         }
     }

@@ -15,9 +15,9 @@
    <children>
       <AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #222831;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="60.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <HBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="60.0" prefWidth="400.0" styleClass="headerAnchorPane" stylesheets="@../Stylesheets/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button fx:id="saveChanges" alignment="CENTER" mnemonicParsing="false" onAction="#saveChanges" text="Сохранить изменения" textFill="#222831">
+                  <Button fx:id="saveChanges" alignment="CENTER" mnemonicParsing="false" onAction="#saveChanges" styleClass="buttons" stylesheets="@../Stylesheets/style.css" text="Сохранить изменения" textFill="#222831">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -31,7 +31,7 @@
                </padding>
             </HBox>
          </children></AnchorPane>
-      <ScrollPane layoutX="-2.0" layoutY="60.0" minViewportHeight="200.0" prefHeight="339.0" prefViewportHeight="200.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+      <ScrollPane layoutX="-2.0" layoutY="60.0" minViewportHeight="200.0" prefHeight="339.0" prefViewportHeight="200.0" prefWidth="500.0" styleClass="mainAnchorPane" stylesheets="@../Stylesheets/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
          <content>
             <GridPane prefHeight="319.0" prefWidth="382.0">
               <columnConstraints>
