@@ -5,11 +5,12 @@
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AnalyzeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AnalyzeController">
    <children>
       <AnchorPane layoutX="1.0" layoutY="22.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #222831;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <TabPane layoutX="8.0" layoutY="60.0" prefHeight="310.0" prefWidth="578.0" tabClosingPolicy="UNAVAILABLE">
@@ -64,14 +65,41 @@
             </Tab>
             <Tab text="Дистанция">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BarChart layoutX="27.0" layoutY="25.0" prefHeight="244.0" prefWidth="530.0" title="Пройденная дистанция">
+                          <xAxis>
+                            <CategoryAxis label="Дата" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis forceZeroInRange="false" label="км." lowerBound="1.0" side="LEFT" upperBound="12.0" />
+                          </yAxis>
+                        </BarChart>
+                     </children></AnchorPane>
                </content>
             </Tab>
             <Tab text="Группы мышц">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <PieChart layoutX="139.0" layoutY="17.0" prefHeight="244.0" prefWidth="301.0" title="Тренировки по группам мышц" />
+                        <PieChart layoutX="105.0" layoutY="17.0" prefHeight="244.0" prefWidth="362.0" title="Тренировки по группам мышц" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Статистика упражнений">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="14.0" layoutY="14.0" prefHeight="255.0" prefWidth="152.0" />
+                        <LineChart layoutX="170.0" layoutY="9.0" prefHeight="270.0" prefWidth="408.0" title="Вес">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
                      </children>
                   </AnchorPane>
                </content>

@@ -7,17 +7,22 @@
 }
 
 .analyzeImage:hover {
-        -fx-opacity: 0.5;
-    }
+    -fx-opacity: 0.5;
+}
 
 .nutritionImage:hover {
-        -fx-opacity: 0.5;
-    }
+    -fx-opacity: 0.5;
+}
 
 .settingsImage:hover {
-        -fx-opacity: 0.5;
-    }
+    -fx-opacity: 0.5;
+}
 
 .trainingImage:hover {
-        -fx-opacity: 0.5;
-    }
+    -fx-opacity: 0.5;
+}
+
+.headerAnchorPane {
+    -fx-pref-height: 60;
+    -fx-background-color: #222831;
+}
